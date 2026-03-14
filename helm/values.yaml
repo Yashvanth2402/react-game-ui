@@ -1,0 +1,10 @@
+replicaCount: 1
+
+image:
+  repository: us-central1-docker.pkg.dev/project-166a7983-818b-43fa-932/cicd-agent-repo/react-game-ui
+  pullPolicy: IfNotPresent
+  tag: "latest"
+
+service:
+  type: ClusterIP
+  port: 80
