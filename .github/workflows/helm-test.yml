@@ -1,0 +1,13 @@
+name: Helm Test
+
+on:
+  push:
+    paths: ['helm/**']
+
+jobs:
+  helm-lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: azure/setup-helm@v1
+      - run: helm lint ./helm
